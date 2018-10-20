@@ -95,11 +95,11 @@ def modificar_cliente():
 	apellido = input("ingrese apellido: ")
 	fec_nac = input("ingrese fecha de nacimiento: ")
 	direccion = input("ingrese direccion: ")
-	localidad = input("ingrese el peso: ")
+	localidad = input("ingrese la localidad: ")
 	telefono = input("ingrese numero de telefono: ")
 	telefono = int(telefono)
 
-	sql = "UPDATE clientes SET dni = "+str(dni)+" , nombre= "+str(nombre)+ ", apellido ="+str(apellido)+" , fec_nac ="+str(fec_nac)+" , direccion ="+str(direccion)+" , localidad ="+str(localidad)+" , telefono ="+str(telefono)+ " WHERE dni="+str(dni)
+	sql = 'UPDATE clientes SET dni = '+str(dni)+' , nombre= "'+str(nombre)+'", apellido ="'+str(apellido)+'", fec_nac ="'+str(fec_nac)+'" , direccion="'+str(direccion)+'" , localidad ="'+str(localidad)+'" , telefono ='+str(telefono)+' WHERE dni='+str(dni)
 
 	cursor.execute(sql)
 	con.commit()
