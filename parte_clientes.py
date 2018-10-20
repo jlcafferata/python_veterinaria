@@ -21,7 +21,7 @@ def ingresar_cliente():
 
 	con = sqlite3.connect("C:\\UTILES\\codigopython\\vaterinaria.db")
 
-	sql = 'INSERT INTO clientes(dni,nombre,apellido,fec_nac,direccion,localidad,telefono) VALUES ('+str(var_dni)+',' +str(var_nombre)+ ',' +str(var_apellido)+','+str(var_fec_nac)+','+str(var_direccion)+','+str(var_localidad)+','+str(var_telefono)+')'
+	sql = 'INSERT INTO clientes(dni,nombre,apellido,fec_nac,direccion,localidad,telefono) VALUES ('+str(var_dni)+',"'+str(var_nombre)+ '","'+str(var_apellido)+'","'+str(var_fec_nac)+'","'+str(var_direccion)+'","'+str(var_localidad)+'",'+str(var_telefono)+')'
 
 	cursor = con.cursor()
 	cursor.execute(sql)
